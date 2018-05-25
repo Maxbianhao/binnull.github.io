@@ -2,16 +2,26 @@
   "小借条": {
     "address": "n1mJsz1F6ywwoVbYFkLQWHHgnPDUDcEXQSF",
     "function": "save",
-    "agrs": "['','','','']"
+    "agrs": "[,,,]"
   },
   "i乐之城": {
     "address": "n1uqh48vjenb9ntWPahJdMxPFKaUhAm7ebv",
     "function": "save",
-    "agrs": "['','','','']"
+    "agrs": "[,,,]"
   },
   "善款去向追踪": {
-    "address": "n1uqh48vjenb9ntWPahJdMxPFKaUhAm7ebv",
+    "address": "n1gTZcDvDhCK8gmpEdmZY4Scxygoi9BJ7Km",
     "function": "save",
-    "agrs": "['>add','','','','','']"
+    "agrs": "[>add,time,,,,]"
+  },
+  "Beauty Note": {
+    "address": "n1rQUnbLnV7Ehez8NyzvGATn8yXaQRGDBV8",
+    "function": "saveNote",
+    "agrs": "[,time]"
+  },
+  "Car Life": {
+    "address": "n1gd2hAmQcoA4m2X5EySugJxFDGfPziE6v8",
+    "function": "recordCar",
+    "agrs": "[,,time]"
   }
 }

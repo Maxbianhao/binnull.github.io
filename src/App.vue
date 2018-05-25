@@ -20,8 +20,12 @@ export default {
         agrs = dapp.agrs.replace('[','').replace(']','').split(','),
         callArgs = '['
       for(let i in agrs) {
-        if(agrs[i][1] === '>') {
+        if(agrs[i][0] === '>') {
           callArgs = callArgs + '"' + agrs[i].replace(/\'/g,'').replace('>', '') + '",'
+        } else if(agrs[i] != '') {
+          if(agrs[i] === 'time') {
+            callArgs = callArgs + '"' + new Date().getTime() + '",'
+          }
         } else {
           callArgs = callArgs + '"' + Number(Math.random().toString().substr(3,0) + Date.now()).toString(36) + i + '",'
         }
