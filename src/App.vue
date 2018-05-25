@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="tag">注：请先安装<a style="color: #62aec7" href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">Chrome Nebulas-WebExtensionWallet</a>钱包插件</div>
     <button v-for="(item, index) in dapps" :key="index" @click="setFun(index)">{{index}}</button>
   </div>
 </template>
@@ -19,7 +20,11 @@ export default {
         agrs = dapp.agrs.replace('[','').replace(']','').split(','),
         callArgs = '['
       for(let i in agrs) {
-        callArgs = callArgs + '"' + Number(Math.random().toString().substr(3,0) + Date.now()).toString(36) + i + '",'
+        if(agrs[i][1] === '>') {
+          callArgs = callArgs + '"' + agrs[i].replace(/\'/g,'').replace('>', '') + '",'
+        } else {
+          callArgs = callArgs + '"' + Number(Math.random().toString().substr(3,0) + Date.now()).toString(36) + i + '",'
+        }
       }
       callArgs = callArgs.substring(0, callArgs.length - 1) + ']'
       saveFun(callArgs, dapp);

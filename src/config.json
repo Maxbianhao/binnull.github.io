@@ -8,5 +8,10 @@
     "address": "n1uqh48vjenb9ntWPahJdMxPFKaUhAm7ebv",
     "function": "save",
     "agrs": "['','','','']"
+  },
+  "善款去向追踪": {
+    "address": "n1uqh48vjenb9ntWPahJdMxPFKaUhAm7ebv",
+    "function": "save",
+    "agrs": "['>add','','','','','']"
   }
 }
